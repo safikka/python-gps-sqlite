@@ -2,8 +2,13 @@ from curses import baudrate
 import serial
 import sqlite3
 
-ser = serial.Serial(port='/dev/ttyUSB0',baudrate=4800,parity=serial.PARITY_NONE)
+# Spek port
+port = '/dev/ttyUSB0'
+baudrate = 4800
+
+ser = serial.Serial(port, baudrate)
 print("connected to: " + ser.portstr)
 
 while True:
-    print(ser.read(10))
+    if ser.in_waiting:
+        print(ser.readline().decode('utf'))
