@@ -15,5 +15,5 @@ print("connected to: " + ser.portstr)
 while True:
     if ser.in_waiting:
         baca = ser.readline().decode('utf')
-        parsing = baca.split()
-        print(parsing[1])
+        parsing = baca.split(',')
+        print(parsing)
