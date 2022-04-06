@@ -11,8 +11,8 @@ ser = serial.Serial(port, baudrate)
 print("connected to: " + ser.portstr)
 
 # Baca isi port
-baca_serial = ser.readline().decode('utf')
+baca_serial = ser.readline()
 
 while True:
     if ser.in_waiting:
-        print(baca_serial)
+        print(baca_serial.decode('utf'))
