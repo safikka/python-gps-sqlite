@@ -6,4 +6,4 @@ ser = serial.Serial(port='/dev/ttyUSB0',baudrate=4800,parity=serial.PARITY_NONE)
 print("connected to: " + ser.portstr)
 
 while True:
-    print(ser.readline())
+    print(ser.read(10))
