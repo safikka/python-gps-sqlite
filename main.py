@@ -6,10 +6,14 @@ import sqlite3
 port = '/dev/ttyUSB0'
 baudrate = 4800
 
+# Setup konek port
 ser = serial.Serial(port, baudrate)
 print("connected to: " + ser.portstr)
 
-print(ser.readline().decode('utf'))
+# Baca isi port
+baca_serial = ser.readline().decode('utf')
+print(type(baca_serial))
+
 # while True:
 #     if ser.in_waiting:
-#         print(ser.readline().decode('utf'))
+#         print()
