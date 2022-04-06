@@ -12,8 +12,7 @@ print("connected to: " + ser.portstr)
 
 # Baca isi port
 baca_serial = ser.readline().decode('utf')
-print(type(baca_serial))
 
-# while True:
-#     if ser.in_waiting:
-#         print()
+while True:
+    if ser.in_waiting:
+        print(baca_serial)
