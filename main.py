@@ -9,6 +9,7 @@ baudrate = 4800
 ser = serial.Serial(port, baudrate)
 print("connected to: " + ser.portstr)
 
-while True:
-    if ser.in_waiting:
-        print(ser.readline().decode('utf'))
+print(ser.readline().decode('utf'))
+# while True:
+#     if ser.in_waiting:
+#         print(ser.readline().decode('utf'))
